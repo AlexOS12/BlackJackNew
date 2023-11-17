@@ -1,9 +1,10 @@
 class Hand:
-    cards = []
-    totalSum = 0
+    cards : list
+    totalSum : int
 
     def __init__(self) -> None:
-        pass
+        self.cards = []
+        self.totalSum = 0
 
     def showHand(self) -> str:
         '''
@@ -16,5 +17,9 @@ class Hand:
         return handDisplay
     
     def takeCard(self, card : tuple[int, str]) -> None:
+        '''
+        adds a card to the hand
+        '''
+
         self.cards.append(card)
         self.totalSum += card[0]

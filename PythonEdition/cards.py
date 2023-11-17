@@ -65,8 +65,7 @@ class Dek:
         Otherwise return (pts, cardSuit + cardVal)
         '''
         if len(self.block):
-            randCardId = random.randint(0, len(self.block) - 1) 
-            card = self.block[randCardId]
-            del self.block[randCardId]
+            card = self.block[0]
+            del self.block[0]
             return card
         return (0, '')
