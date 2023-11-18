@@ -50,13 +50,13 @@ def Game(dek: cards.Dek, players: dict[int, hand.Hand]) -> None:
 
 
 if __name__ == '__main__':
-    dek = cards.Dek()
-    dek.shuffle()
-
-    nPlayers = int(input("Укажите кол-вол игроков: "))
-    players = {i: hand.Hand() for i in range(nPlayers)}
-
     while True:
+        dek = cards.Dek()
+        dek.shuffle()
+
+        nPlayers = int(input("Укажите кол-вол игроков: "))
+        players = {i: hand.Hand() for i in range(nPlayers)}
+
         print('Игра начата!')
         Game(dek, players)
         ans = input("Начать новую игру? [y/n] ")
